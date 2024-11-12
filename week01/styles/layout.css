@@ -1,10 +1,89 @@
+/* styles/layout.css */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     display: grid;
-    font-family: 'Times New Roman', Times, serif;
-    color-scheme: dark;
+    grid-template-rows: auto auto 1fr auto; /* Header, menu, conteúdo, footer */
+    grid-template-columns: 1fr; /* Uma coluna para o layout geral */
+    grid-template-areas: 
+        "header-text"
+        "menu"
+        "content"
+        "footer";
+    min-height: 100vh;
+    gap: 0;
 }
-nav {
+
+/* Header Text */
+.header-text {
+    grid-area: header-text;
+    background-color: #333333;
+    color: white;
+    padding: 10px 20px; /* Menor padding no topo para aproximar o texto */
+    text-align: left;
+    width: 100%;
+}
+
+/* Menu */
+.menu {
+    grid-area: menu;
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.menu ul {
     display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    color-scheme: light;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 20px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Container para Main e Aside */
+.container {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Aside Content */
+.aside-content {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #4d4d4d;
+    color: white;
+    padding: 10px 10px; /* Menor padding no topo para alinhar o texto ao topo */
+    display: flex;
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: flex-start; /* Alinha o texto no topo verticalmente */
+    text-align: center;
+    width: 100%;
 }
