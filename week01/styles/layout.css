@@ -1,6 +1,10 @@
 body {
     display: grid;
+    font-family: 'Times New Roman', Times, serif;
+    color-scheme: #333;
 }
 nav {
     display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    color-scheme: #aaa;
 }
