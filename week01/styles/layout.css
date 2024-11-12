@@ -1,18 +1,18 @@
 /* styles/layout.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-rows: auto auto 1fr auto; /* Header, menu, conteúdo, footer */
-    grid-template-columns: 1fr; /* Uma coluna para o layout geral */
+    grid-template-columns: 1fr;
     grid-template-areas: 
         "header-text"
         "menu"
         "content"
         "footer";
     min-height: 100vh;
-    gap: 0;
 }
 
 /* Header Text */
@@ -20,9 +20,8 @@ body {
     grid-area: header-text;
     background-color: #333333;
     color: white;
-    padding: 10px 20px; /* Menor padding no topo para aproximar o texto */
+    padding: 10px 20px;
     text-align: left;
-    width: 100%;
 }
 
 /* Menu */
@@ -30,21 +29,18 @@ body {
     grid-area: menu;
     background-color: #000000;
     padding: 0;
-    margin: 0;
-    text-align: center;
-    width: 100%;
 }
 
 .menu ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
     margin: 0;
 }
 
 .menu ul li {
-    padding: 20px 0;
+    text-align: center;
 }
 
 .menu a {
@@ -53,12 +49,14 @@ body {
     font-size: 18px;
 }
 
-/* Container para Main e Aside */
+/* Container for Main and Aside */
 .container {
     display: grid;
     grid-area: content;
     grid-template-columns: 3fr 1fr;
+    gap: 20px;
     width: 100%;
+    padding: 0;
 }
 
 /* Main Content */
@@ -66,12 +64,13 @@ body {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: left;
+    padding: 0;
 }
 
 /* Aside Content */
 .aside-content {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 0;
     text-align: left;
 }
 
@@ -80,10 +79,9 @@ body {
     grid-area: footer;
     background-color: #4d4d4d;
     color: white;
-    padding: 10px 10px; /* Menor padding no topo para alinhar o texto ao topo */
-    display: flex;
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: flex-start; /* Alinha o texto no topo verticalmente */
+    padding: 20px;
     text-align: center;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
