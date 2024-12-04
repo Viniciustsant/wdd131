@@ -5,11 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Page with informations about Canada">
     <meta name="author" content="Vinicius Santiago">
-    <title>Document</title>
+    <title>Canada</title>
     <link rel="stylesheet" href="styles/place.css">
-    <script src="place.js" defer></script>
+    <script src="scripts/place.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Canada</h1>
+    </header>
+    <main>
+        <picture>
+            <source media="(min-width: 798px)" srcset="images/canada-horizontal.webp">
+            <img src="images/canada-vertical.webp" alt="Canada" class="main-image">
+        </picture>
+
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li>Area: 9.984.970 Km²</li>
+                <li>Population: 39.742.400</li>
+                <li>Capital: Ottawa</li>
+                <li>Languages: English and French</li>
+                <li>Currency: Canadian Dolar</li>
+                <li>Time Zone:<br>
+                    Newfoundland Time (UTC-3:30)<br>
+                    Atlantic Time (UTC-4)<br>
+                    Eastern Time (UTC-5)<br>
+                    Central Time (UTC-6)<br>
+                    Mountain Time (UTC-7)<br>
+                    Pacific Time (UTC-8)</li>
+                <li>Calling Code: +1</li>
+                <li>Internet TLD: .ca</li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h3>Weather</h3>
+            <img src="images/weather.svg" alt="Weather icon" width="100" height="auto">
+            <ul>
+                <li>Temperature: 1°C</li>
+                <li>Conditions: Cloudy</li>
+                <li>Wind: 34 Km/h</li>
+                <li>Wind Chill: -4°C</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> | ⚽ Vinicius Santiago ⚽ - São Paulo, Brasil.</p>
+        <p><span id="lasModified"></span></p>
+    </footer>
 </body>
 </html>

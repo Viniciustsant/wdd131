@@ -1,0 +1,81 @@
+/* Estilos base (Mobile-first) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    background: #fd2929;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.main-image {
+    width: 100%;
+    height: auto; /* Ajusta a altura proporcionalmente */
+    display: block;
+    padding: 0px;
+}
+
+.data, .weather {
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto dentro das seções */
+    width: 90%;
+    max-width: 600px;
+}
+
+
+
+.data ul, .weather ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data li, .weather li {
+    margin: 10px 0; /* Espaçamento entre as linhas */
+    display: flex;
+    flex-direction: column; /* Organiza o rótulo e o valor verticalmente */
+    align-items: center;
+}
+
+.data li span, .weather li span {
+    display: block; /* Faz o valor aparecer abaixo do rótulo */
+    margin-top: 5px; /* Espaçamento entre o rótulo e o valor */
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr; /* Layout horizontal: imagem ocupa 2 partes, data e weather 1 parte cada */
+        gap: 20px;
+        align-items: start;
+        width: 100%;
+    }
+
+    .main-image {
+        grid-column: span 3; /* A imagem ocupa toda a largura no modo horizontal */
+        width: 100%;
+        height: 100vh; /* Faz a imagem cobrir toda a altura da tela */
+        object-fit: cover; /* A imagem cobre toda a área */
+    }
+
+    .data, .weather {
+        background: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    footer {
+        text-align: right;
+    }
+}
