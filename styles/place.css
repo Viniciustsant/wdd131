@@ -7,8 +7,9 @@ body {
 
 header, footer {
     text-align: center;
-    background: #fd2929;
+    background: rgb(173, 25, 25);
     padding: 30px;
+    color: white;
 }
 
 header h1 {
@@ -28,6 +29,8 @@ header h1 {
     text-align: center; /* Centraliza o texto dentro das seções */
     width: 90%;
     max-width: 600px;
+    background-color: #521e06;
+    color: #ffffff;
 }
 
 
@@ -60,22 +63,49 @@ header h1 {
         gap: 20px;
         align-items: start;
         width: 100%;
+        height: calc(100vh - 160px); /* Ajusta a altura para telas grandes */
+        display: block; /* Remove o grid */
     }
 
     .main-image {
-        grid-column: span 3; /* A imagem ocupa toda a largura no modo horizontal */
         width: 100%;
-        height: 100vh; /* Faz a imagem cobrir toda a altura da tela */
+        height: 100%; /* Faz a imagem cobrir toda a altura da tela */
         object-fit: cover; /* A imagem cobre toda a área */
     }
 
     .data, .weather {
         background: #f9f9f9;
-        padding: 10px;
         border: 1px solid #ddd;
+        background-color: #521e06;
+        width: 200px; /* Reduz a largura dos quadros */
+        padding: 5px;
+
+    }
+
+    h2{
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+        color: black;
+    }
+
+    .data {
+        position: absolute;
+        top: 20%;
+        left: 2%;
+        font-size: 12px;
+    }
+
+    .weather {
+        position: absolute;
+        top: 20%;
+        right: 2%;
     }
 
     footer {
-        text-align: right;
+        text-align: center;
+        background-color: rgb(173, 25, 25);
+        padding: 20px; /* Ajuste o padding conforme necessário */
+        color: white;
+        margin-top: 0;
     }
 }
