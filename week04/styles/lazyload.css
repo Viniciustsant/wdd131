@@ -1,0 +1,32 @@
+main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    background-color: black;
+    animation: fade 5s;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+}
+
+img.loaded {
+    opacity: 1; /* Fica visível quando a classe 'loaded' é adicionada */
+    background-color: transparent; /* Remove o fundo preto */
+}
+
+h1{
+    text-align: center;
+}
