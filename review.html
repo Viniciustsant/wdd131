@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vinicius Santiago">
+    <meta name="description" content="Review Confirmation Page">
+    <title>Review Confirmation</title>
+    <style>/* Geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        /* Seção Principal */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Estilo do conteúdo */
+        .review-container {
+            width: 100%;
+        }
+        
+        .review-container h2 {
+            font-size: 1.5rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        
+        .review-container p {
+            margin-bottom: 15px;
+        }
+        
+        .review-container .feature-list {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        
+        /* Botão */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Rodapé */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        </style>
+    <script>
+        // Incrementar o contador de avaliações no localStorage
+        let reviewCount = localStorage.getItem("reviewCount") || 0;
+        reviewCount++;
+        localStorage.setItem("reviewCount", reviewCount);
+
+        // Exibir contador de avaliações
+        window.onload = function() {
+            document.getElementById("reviewCounter").textContent = `Total Reviews Submitted: ${reviewCount}`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <main>
+        <p>Your product review has been submitted successfully.</p>
+        <p id="reviewCounter"></p>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> | Vinicius Santiago - São Paulo, Brasil.</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
