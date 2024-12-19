@@ -28,22 +28,22 @@
         <p>Destaques do ano:</p>
         
         <div class="destaques">
-            <img src="images/richard-penalti.jpg" width="100%" height="350px">
+            <img src="images/richard-penalti.jpg" alt="Richard" width="100%" height="350px" loading="lazy">
             <p>Campeonato Cearense</p>
 
-            <img src="images/acesso.jpg" width="100%" height="350px">
+            <img src="images/acesso.jpg" alt="Acesso" width="100%" height="350px" loading="lazy">
             <p>Série A</p>
 
-            <img src="images/Pulga.jpg" width="100%" height="350px">
+            <img src="images/Pulga.jpg" alt="Pulga" width="100%" height="350px" loading="lazy">
             <p>Artilheiro do Ano: Erick Pulga</p>
 
-            <img src="images/saulo.jpg" width="100%" height="350px">
+            <img src="images/saulo.jpg" alt="Saulo" width="100%" height="350px" loading="lazy">
             <p>Mais Decisivo: Saulo Mineiro</p>
 
-            <img src="images/ceara-unidos.jpg" width="100%" height="350px">
+            <img src="images/ceara-unidos.jpg" alt="Ceara Unido" width="100%" height="350px" loading="lazy">
             <p>Apoio</p>
 
-            <img src="images/forca.jpg" width="100%" height="350px">
+            <img src="images/forca.jpg" alt="Ceara Força" width="100%" height="350px" loading="lazy">
             <p>União</p>
         </div>
         
@@ -68,6 +68,72 @@
                 Autor: José Patápio da Costa Jatahy
             </p>
         </div>
+
+        <form action="review.html" method="get">
+
+            <p>Website Rating</p>
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <div class="rating-group">
+                    <input type="radio" id="rating-1" name="rating" value="1" required>
+                    <label for="rating-1">&#9733;</label>
+                    <input type="radio" id="rating-2" name="rating" value="2" required>
+                    <label for="rating-2">&#9733;&#9733;</label>
+                    <input type="radio" id="rating-3" name="rating" value="3" required>
+                    <label for="rating-3">&#9733;&#9733;&#9733;</label>
+                    <input type="radio" id="rating-4" name="rating" value="4" required>
+                    <label for="rating-4">&#9733;&#9733;&#9733;&#9733;</label>
+                    <input type="radio" id="rating-5" name="rating" value="5" required>
+                    <label for="rating-5">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <div>
+                <label for="install-date">Date of Visit:</label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>What parts did you like ?<br><i>(Check all that apply)</i></legend>
+                <div class="features-group">
+                    <div class="feature-item">
+                        <input type="checkbox" id="feature-home" name="features" value="Home Page">
+                        <label for="home">Home Page</label>
+                    </div>
+                    <div class="feature-item">
+                        <input type="checkbox" id="feature-history" name="features" value="History">
+                        <label for="feature-camera">History Page</label>
+                    </div>
+                    <div class="feature-item">
+                        <input type="checkbox" id="feature-players" name="features" value="Players">
+                        <label for="feature-display">Players Page</label>
+                    </div>
+                    <div class="feature-item">
+                        <input type="checkbox" id="feature-championships" name="features" value="Championships">
+                        <label for="feature-performance">Championships page</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Written Review -->
+            <div>
+                <label for="review">Any suggestions?<i> (optional)</i></label>
+                <textarea id="review" name="review" rows="4" cols="50" placeholder="I think that..."></textarea>
+            </div>
+
+            <!-- User Name -->
+            <div>
+                <label for="username">Your Name<i> (optional)</i></label>
+                <input type="text" id="username" name="username" placeholder="Your Name">
+            </div>
+
+            <!-- Form Submission Button -->
+            <div>
+                <input type="submit" value="Post Review">
+            </div>
+        </form>
             
     </main>
     <footer>
