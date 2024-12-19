@@ -103,6 +103,30 @@ footer p {
     color: #ffffff;
 }
 
+.jogadores {
+    text-align: center;
+}
+
+.jogadores .jogador {
+    margin-bottom: 40px; /* Espaço entre os blocos de jogador */
+}
+
+.jogadores img {
+    display: block; 
+    margin: 0 auto 10px; /* Remove qualquer margem extra acima e adiciona margem abaixo das imagens */
+}
+
+.jogadores p {
+    margin-top: 10px; /* Espaço entre a imagem e o nome */
+    font-size: 1.2rem; /* Tamanho da fonte do nome */
+    color: #ffffff; /* Cor branca para o nome */
+}
+
+.trofeus {
+    text-align: center;
+}
+
+
 @media (max-width: 768px) {
     header {
         font-size: 1.5rem;
